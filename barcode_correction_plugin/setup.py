@@ -27,7 +27,7 @@ setup(
     ],
     entry_points = {
         'multiqc.modules.v1': [
-            'barcode = barcode_correction_plugin.modules.barcode_correction:MultiqcModule',
+            'barcode_correction = barcode_correction_plugin.modules.barcode_correction:MultiqcModule',
         ],
         'multiqc.cli_options.v1': [
             'disable_barcode_correction_plugin = barcode_correction_plugin.cli:disable_barcode_correction_plugin'

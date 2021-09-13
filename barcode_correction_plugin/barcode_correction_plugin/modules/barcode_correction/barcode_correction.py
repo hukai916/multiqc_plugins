@@ -26,13 +26,13 @@ class MultiqcModule(BaseMultiqcModule):
             name = 'Barcode Correction',
             target = "barcode_correction",
             anchor = 'barcode_correction',
-            href = '',
+            href = 'https://github.com/hukai916/scatacseqflow/blob/main/modules/local/correct_barcode.nf',
             info = " is a scatacseqflow module to show how many barcodes are corrected for each sample."
         )
 
         # Find and load any input files for this module
         self.barcode_summary = dict()
-        for f in self.find_log_files('barcode/correction/summary_file'):
+        for f in self.find_log_files('barcode_correction/summary_file'):
             # note that the name can't contain "_", so that barcode_correction/summary_file is not valid key name.
             self.barcode_summary[f['s_name']] = dict()
             for l in f['f'].splitlines():
