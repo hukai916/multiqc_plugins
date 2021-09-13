@@ -1,0 +1,1 @@
+Summary (R_correct_barcode): total valid: 1185252; total corrected (1 mismatch): 36658; total discarded: 28090.
