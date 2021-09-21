@@ -1,0 +1,1 @@
+Summary (bam_filter): total valid: 17617; total filtered: 16257.

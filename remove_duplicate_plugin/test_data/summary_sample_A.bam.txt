@@ -1,0 +1,1 @@
+Summary (rm_dup.py): total unique reads: 943586, total duplicate reads: 114031.
