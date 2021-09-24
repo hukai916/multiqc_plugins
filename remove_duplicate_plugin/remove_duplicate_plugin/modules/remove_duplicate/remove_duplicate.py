@@ -33,7 +33,6 @@ class MultiqcModule(BaseMultiqcModule):
         # Find and load any input files for this module
         self.duplicate_summary = dict()
         for f in self.find_log_files('remove_duplicate/summary_file'):
-            # note that the name can't contain "_", so that remove_duplicate/summary_file is not valid key name.
             self.duplicate_summary[f['s_name']] = dict()
             for l in f['f'].splitlines():
                 for key in ('total unique reads:', 'total duplicate reads:'):
