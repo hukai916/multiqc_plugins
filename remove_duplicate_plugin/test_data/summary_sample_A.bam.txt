@@ -1,1 +1,1 @@
-Summary (rm_dup.py): total unique reads: 943586, total duplicate reads: 114031.
+Summary (rm_dup.py): total unique fragments: 470250, total duplicate fragments: 57184, other fragments(unproper mapped or with no corrected barcodes): 2749.

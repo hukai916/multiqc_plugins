@@ -8,7 +8,7 @@ def fragment_count_plot(self):
     """Stacked bar plot showing counts of fragments"""
     pconfig = {
         "id": "remove_duplicate_counts_plot",
-        "title": "Remove Duplicate: Read Counts",
+        "title": "Remove Duplicate: Fragment Counts",
         "ylab": "Number of fragments",
         "cpswitch_counts_label": "Number of fragments",
         "hide_zero_cats": False,
