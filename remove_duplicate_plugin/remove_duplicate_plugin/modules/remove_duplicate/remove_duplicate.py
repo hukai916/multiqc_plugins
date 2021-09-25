@@ -9,7 +9,7 @@ import logging
 from multiqc import config
 from multiqc.modules.base_module import BaseMultiqcModule
 
-from .read_count_plot import read_count_plot
+from .fragment_count_plot import fragment_count_plot
 
 # Initialise the main MultiQC logger
 log = logging.getLogger('multiqc')
@@ -27,7 +27,7 @@ class MultiqcModule(BaseMultiqcModule):
             target = "remove_duplicate",
             anchor = 'remove_duplicate',
             href = 'https://github.com/hukai916/scatacseqflow/blob/main/modules/local/remove_duplicate.nf',
-            info = " is a scatacseqflow module to show how many PCR duplicate reads are removed for each sample."
+            info = " is a scatacseqflow module to show how many PCR duplicate fragments are removed for each sample."
         )
 
         # Find and load any input files for this module
@@ -35,7 +35,7 @@ class MultiqcModule(BaseMultiqcModule):
         for f in self.find_log_files('remove_duplicate/summary_file'):
             self.duplicate_summary[f['s_name']] = dict()
             for l in f['f'].splitlines():
-                for key in ('total unique reads:', 'total duplicate reads:'):
+                for key in ('total unique fragments:', 'total duplicate fragments:', 'other fragments(unproper mapped or with no corrected barcodes):'):
                     value = l.split(key)[1].split()[0][:-1]
                     self.duplicate_summary[f['s_name']][key] = value
 
@@ -52,4 +52,4 @@ class MultiqcModule(BaseMultiqcModule):
         # Write parsed report data to a file
         self.write_data_file(self.duplicate_summary, 'multiqc_remove_duplicate')
 
-        read_count_plot(self)
+        fragment_count_plot(self)
