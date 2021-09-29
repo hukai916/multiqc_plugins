@@ -40,7 +40,7 @@ def remove_duplicate_plugin_execution_start():
 
     # Add to the search patterns used by modules
     if 'remove_duplicate/summary_file' not in config.sp:
-        config.update_dict( config.sp, { 'remove_duplicate/summary_file': { 'contents': 'Summary (rm_dup.py):' } } )
+        config.update_dict( config.sp, { 'remove_duplicate/summary_file': { 'contents': 'Summary (remove_duplicate.py):' } } )
 
     # Some additional filename cleaning
     config.fn_clean_exts.extend([
