@@ -19,7 +19,7 @@ def read_count_plot(self):
         pdata[s_name] = dict()
 
         pdata[s_name]["Valid Reads"] = int(self.barcode_summary[s_name]["total valid:"])
-        pdata[s_name]["Corrected Reads"] = int(self.barcode_summary[s_name]["total corrected (1 mismatch):"])
+        pdata[s_name]["Corrected Reads"] = int(self.barcode_summary[s_name]["total corrected:"])
         pdata[s_name]["Discarded Reads"] = int(self.barcode_summary[s_name]["total discarded:"])
 
     pcats = ["Valid Reads", "Corrected Reads", "Discarded Reads"]
