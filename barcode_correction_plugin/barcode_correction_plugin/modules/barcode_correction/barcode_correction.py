@@ -36,7 +36,7 @@ class MultiqcModule(BaseMultiqcModule):
             # note that the name can't contain "_", so that barcode_correction/summary_file is not valid key name.
             self.barcode_summary[f['s_name']] = dict()
             for l in f['f'].splitlines():
-                for key in ('total valid:', 'total corrected (1 mismatch):', 'total discarded:'):
+                for key in ('total valid:', 'total corrected:', 'total discarded:'):
                     value = l.split(key)[1].split()[0][:-1]
                     self.barcode_summary[f['s_name']][key] = value
 
