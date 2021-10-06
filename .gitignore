@@ -48,6 +48,9 @@ coverage.xml
 .pytest_cache/
 *_test/
 test/
+multiqc_report.html
+multiqc_data/
+multiqc_plot*/
 
 # Translations
 *.mo
