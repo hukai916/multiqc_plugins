@@ -32,7 +32,6 @@ class MultiqcModule(BaseMultiqcModule):
             href = '',
             info = ""
         )
-
         self.archr = dict()
         # archr_create_arrowfiles_fragment:
         plot_figure(self, dir_n = "archr_create_arrowfiles/", endswith = "Fragment_Size_Distribution.jpg", img_width = "32%", name = "Arrowfile QC: fragment size distribution", description = "", helptext = "For good quality data, we expect to see a periodic pattern reflecting the nucleosomal wrapping of DNA. There are valleys and hills because fragments must span integral number of nucleosomes.")
@@ -46,8 +45,9 @@ class MultiqcModule(BaseMultiqcModule):
         for f in self.find_log_files('archr/summary_add_doubletscores'):
             file_path = os.path.join(f['root'], f['fn'])
             with open(file_path, "r") as summary:
-                if "UMAP Projection R^2" in line:
-                    text = text + line.strip() + "\n"
+                for line in summary:
+                    if "UMAP Projection R^2" in line:
+                        text = text + line.strip() + "<br>"
         plot_figure(self, dir_n = "archr_add_doubletscores/", endswith = "Doublet-Summary.jpg", img_width = "32%", name = "Arrowfile QC: doublet removal", description = text, helptext = "Doublet refers to a single droplet receiving a single cell barcode but more than one nucleus. It causes reads that come from more than one cells to appear as if they were from one single cell. To label those doublet, ArchR leverages a strategy that projects synthetic doublet into the UMAP embedding and finds the nearest neighbors. The doublet enrichment plot represents the enrichment of simulated doublets nearby each cell; the doublet density plot represents the density of simulated doublet projectcions.<br>ArchR reports a R^2 value for the UMAP projection (details see corresponding summary_add_doubletscores_xxx.txt). If that value is less than 0.9, we recommend skipping doublet removal or use **knnMethod = 'LSI'** and **force = TRUE**.")
         # plot_figure(self, dir_n = "doublet_qc_*/", endswith = "Doublet-Summary.jpg", img_width = "32%", name = "Arrowfile doublet QC: statistics.", description = "ArchR doublet statistics for each sample.", helptext = "To be added")
         # archr_archrproject_qc:
