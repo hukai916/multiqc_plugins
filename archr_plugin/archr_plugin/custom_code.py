@@ -41,6 +41,11 @@ def archr_plugin_execution_start():
     # Add to the search patterns used by modules
     if 'archr/jpeg' not in config.sp:
         config.update_dict( config.sp, { 'archr/jpeg': { 'fn': '*.jpg' } } )
+    if 'archr/summary_add_doubletscores' not in config.sp:
+        config.update_dict( config.sp, { 'archr/summary_add_doubletscores': { 'fn': 'summary_add_doubletscores_*.txt' } } )
+    if 'archr/summary_filter_doublets' not in config.sp:
+        config.update_dict( config.sp, { 'archr/summary_filter_doublets': { 'fn': 'summary_filter_doublets.txt' } } )
+
     # if 'archr/create_arrowfiles_fragment' not in config.sp:
     #     config.update_dict( config.sp, { 'archr/create_arrowfiles_fragment': { 'fn': '*Fragment_Size_Distribution*.jpg' } } )
     # if 'archr/create_arrowfiles_tss' not in config.sp:
@@ -51,10 +56,8 @@ def archr_plugin_execution_start():
     #     config.update_dict( config.sp, { 'archr/archrproject_qc': { 'fn': 'QC-Sample-FragSizes-TSSProfile.jpg\|TSS-vs-Frags.jpg\|QC-Sample-Statistics.pdf' } } )
         # config.update_dict( config.sp, { 'archr/archrproject_qc': { 'fn': 'QC-Sample-FragSizes-TSSProfile.jpg' } } )
 
-
-
-    if 'archr/clustering' not in config.sp:
-        config.update_dict( config.sp, { 'archr/clustering': { 'fn': '*.jpg' } } )
+    # if 'archr/clustering' not in config.sp:
+    #     config.update_dict( config.sp, { 'archr/clustering': { 'fn': '*.jpg' } } )
 
     # Some additional filename cleaning
     config.fn_clean_exts.extend([

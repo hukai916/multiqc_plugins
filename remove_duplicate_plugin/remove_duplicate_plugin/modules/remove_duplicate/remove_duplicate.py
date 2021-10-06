@@ -27,7 +27,7 @@ class MultiqcModule(BaseMultiqcModule):
             target = "remove_duplicate",
             anchor = 'remove_duplicate',
             href = 'https://github.com/hukai916/scatacseqflow/blob/main/modules/local/remove_duplicate.nf',
-            info = " is a scatacseqflow module to show how many PCR duplicate fragments are removed for each sample."
+            info = " is a module to count and remove fragment PCR duplicates for each sample."
         )
 
         # Find and load any input files for this module

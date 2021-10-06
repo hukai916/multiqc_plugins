@@ -31,8 +31,8 @@ def read_count_plot(self):
         anchor="barcode_correction_read_counts",
         description="",
         helptext="""
-        This plot shows the total number of reads, broken down into valid reads (without barcode correction), barcodes corrected reads (with 1 mismatch) and discarded reads (with more than 1 mismatch).
-        This plot is generated based on the summary file from the scatacseqflow correct_barcode module.
+        This plot shows the total number of reads, broken down into valid reads (match perfectly with whitelist barcodes), barcode-corrected reads and discarded reads (too distant away from any whitelist barcodes to be corrected).
+        This plot is generated based on the summary file from the correct_barcode module.
         """,
         plot=bargraph.plot(pdata, pcats, pconfig),
     )

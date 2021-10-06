@@ -31,8 +31,10 @@ def fragment_count_plot(self):
         anchor="remove_duplicate_fragment_counts",
         description="",
         helptext="""
-        This plot shows the total number of fragments, broken down into unique fragments and duplicate fragments and other fragments (unproper mapped or without corrected barcodes).
-        This plot is generated based on the summary file from the scatacseqflow remove_duplicate module.
+        This plot shows the total number of fragments, broken down into unique fragments and duplicate fragments and other fragments (not properly mapped or without valid cell barcodes).
+        This plot is generated based on the summary file from the remove_duplicate module.
+        For fragments that have the same cell barcode, the duplication is determined by looking at the starting coordinates and the fragment lengths. Soft-clippings are extended before comparison. Among duplicated fragments, the one with the highest mean sequencing quality will be kept.
+        The number of total duplicate fragments is calculated as: the number of total fragments - the number of total fragments that have at least one count (total unique fragments) - the number of other fragments.
         """,
         plot=bargraph.plot(pdata, pcats, pconfig),
     )
