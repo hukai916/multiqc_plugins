@@ -40,7 +40,7 @@ def barcode_correction_plugin_execution_start():
 
     # Add to the search patterns used by modules
     if 'barcode_correction/summary_file' not in config.sp:
-        config.update_dict( config.sp, { 'barcode_correction/summary_file': { 'contents': 'Summary (R_correct_barcode):' } } )
+        config.update_dict( config.sp, { 'barcode_correction/summary_file': { 'contents': 'Summary (correct_barcode):' } } )
 
     # Some additional filename cleaning
     config.fn_clean_exts.extend([
