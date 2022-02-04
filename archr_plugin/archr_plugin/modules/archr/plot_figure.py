@@ -21,12 +21,21 @@ def plot_figure(self, dir_n, endswith = ".jpg", img_width = "32%", name = "To be
                 plot_path_all = plot_path_all + plot_path + "<br>"
                 plot = plot + "<figure style=\"border:solid 1px black; display:inline-block; width:" + img_width + "; margin:0.5%\">" + "<figcaption style=\"text-align: center; height: 40px; padding: 3px\">" + f['s_name'] + "</figcaption>" + " <img width=100% src=\"" + plot_path + "\">" + " </figure>"
     if plot == "":
-        self.add_section(
-                name = name,
-                description = "<h4>" + description + "</h4><br>",
-                helptext = helptext,
-                plot = "<h3>N/A</h3>"
-            )
+        # deal with amulet filter module:
+        if dir_n == "amulet_filter_doublets/":
+            self.add_section(
+                    name = name,
+                    description = "<h4>" + description + "</h4><br>",
+                    helptext = helptext,
+                    plot = "<h3>Refer to ./amulet_doublets.txt for a list of detected doublets.</h3>"
+                 )
+        else:
+            self.add_section(
+                    name = name,
+                    description = "<h4>" + description + "</h4><br>",
+                    helptext = helptext,
+                    plot = "<h3>N/A</h3>"
+                )
     else:
         self.add_section(
                 name = name,
