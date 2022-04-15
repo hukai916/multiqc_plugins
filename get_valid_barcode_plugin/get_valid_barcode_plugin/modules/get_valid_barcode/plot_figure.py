@@ -13,6 +13,8 @@ def plot_figure(self, dir_n, endswith = ".jpg", img_width = "32%", name = "To be
 
     plot = ""
     plot_path_all = ""
+    print("here")
+    print(self.find_log_files('get_valid_barcode/jpeg'))
     for f in self.find_log_files('get_valid_barcode/jpeg'):
         print("test: ")
         print(f)
