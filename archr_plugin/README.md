@@ -4,7 +4,7 @@
 
 ### Goals
 
-This plugin contains code to generate HTML report that would include ArchR module results from scatacseqflow pipeline.
+This plugin contains code to generate HTML report that would include ArchR module results from scATACpipe pipeline.
 
 ### Disabling the plugin
 

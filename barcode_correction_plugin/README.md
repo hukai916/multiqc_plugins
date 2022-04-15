@@ -2,7 +2,7 @@
 
 ### Goal
 
-This plugin is to plot summary files from barcode_correction.nf module from scatacseqflow pipeline.
+This plugin is to plot summary files from barcode_correction.nf module from scATACpipe pipeline.
 
 ### Disabling the plugin
 

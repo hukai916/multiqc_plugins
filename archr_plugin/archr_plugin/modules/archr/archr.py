@@ -71,7 +71,7 @@ class MultiqcModule(BaseMultiqcModule):
         # amulet_filter_doublets:
         plot_figure(self, dir_n = "amulet_filter_doublets/", endswith = ".jpg", img_width = "48%", name = "Filtering doublets (with AMULET)", description = "", helptext = "Count how many doublets are filtered out.")
         # archr_clustering:
-        plot_figure(self, dir_n = "archr_clustering/", endswith = ".jpg", img_width = "48%", name = "Clusterings", description = "", helptext = "ArchR provides two approaches for clustering: default method is 'Seurat', alternatively, we can also use 'Scran'. For scATACpipe, 'Seurat' is used.")
+        plot_figure(self, dir_n = "archr_clustering/", endswith = ".jpg", img_width = "48%", name = "Clusterings (use IterativeLSI when Harmony not enabled)", description = "", helptext = "ArchR provides two approaches for clustering: default method is 'Seurat', alternatively, we can also use 'Scran'. For scATACpipe, 'Seurat' is used.")
         # archr_embedding:
         plot_figure(self, dir_n = "archr_embedding/", endswith = ".jpg", img_width = "48%", name = "Single-cell embeddings", description = "", helptext = "ArchR provides two approaches, namely Uniform Manifold Approximation and Projection (UMAP) and t-Stocastic Neighbor Embedding (t-SNE). We plot the embedding use both methods against clusterings.<br>In addition, the effects of Harmony batch correction are visualized using UMAP and t-SNE.")
         # archr_marker_gene_clusters:
