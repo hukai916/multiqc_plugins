@@ -35,7 +35,7 @@ def get_valid_barcode_plugin_execution_start():
 
     if 'get_valid_barcode/jpeg' not in config.sp:
         print("not in")
-        config.update_dict( config.sp, { 'get_valid_barcode/jpeg': { 'fn': '*.jpg' } } )
+        config.update_dict( config.sp, { 'get_valid_barcode/jpeg': { 'fn': '*.pdf' } } )
         print("update done")
 
     # Some additional filename cleaning
