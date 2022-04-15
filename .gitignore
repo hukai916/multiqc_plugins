@@ -51,6 +51,11 @@ test/
 multiqc_report.html
 multiqc_data/
 multiqc_plot*/
+archr_plugin_test/
+multiqc_report.html
+test/
+multiqc_plots/
+multiqc_data/
 
 # Translations
 *.mo
