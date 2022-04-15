@@ -13,21 +13,13 @@ def plot_figure(self, dir_n, endswith = ".jpg", img_width = "32%", name = "To be
 
     plot = ""
     plot_path_all = ""
-    print("here in plot")
-    print(self.find_log_files('get_valid_barcode/jpeg'))
     for f in self.find_log_files('get_valid_barcode/jpeg'):
-        print("TEST ")
-        print(f)
         if dir_n in f['root']:
-            print(dir_n, f['root'], "INSIDE")
-
             if f['fn'].endswith(endswith):
                 plot_path = os.path.join(f['root'], f['fn'])
                 self.get_valid_barcode[plot_path] = f
                 plot_path_all = plot_path_all + plot_path + "<br>"
                 plot = plot + "<figure style=\"border:solid 1px black; display:inline-block; width:" + img_width + "; margin:0.5%\">" + "<figcaption style=\"text-align: center; height: 40px; padding: 3px\">" + f['s_name'] + "</figcaption>" + " <img width=100% src=\"" + plot_path + "\">" + " </figure>"
-        else:
-            print(dir_n, f['root'], "OUTSIDE")
     self.add_section(
             name = name,
             description = "<h4>" + description + "</h4><br>"+ "<b>Plot location:<br></b> " + plot_path_all,

@@ -34,9 +34,7 @@ def get_valid_barcode_plugin_execution_start():
     log.info("Running get_valid_barcode MultiQC Plugin v{}".format(config.get_valid_barcode_plugin_version))
 
     if 'get_valid_barcode/jpeg' not in config.sp:
-        print("not in")
-        config.update_dict( config.sp, { 'get_valid_barcode/jpeg': { 'fn': '*.jpg' } } )
-        print("update done")
+        config.update_dict( config.sp, { 'get_valid_barcode/jpeg': { 'fn': '*.jpeg' } } ) # can't set it to *.jpg since ArchR plugin already uses it, otherwise only one plugin can capture all *.jpg files.
 
     # Some additional filename cleaning
     config.fn_clean_exts.extend([
@@ -51,4 +49,3 @@ def get_valid_barcode_plugin_execution_start():
         '*/my_awesome_pipeline/noisy_data/*',
         '*/my_awesome_pipeline/rubbish/*'
     ])
-    print("custom end")

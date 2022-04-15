@@ -19,8 +19,6 @@ log = logging.getLogger('multiqc')
 class MultiqcModule(BaseMultiqcModule):
 
     def __init__(self):
-        print("enter here")
-
         # Halt execution if we've disabled the plugin
         if config.kwargs.get('disable_get_valid_barcode_plugin', True):
             return None
@@ -34,11 +32,7 @@ class MultiqcModule(BaseMultiqcModule):
             info = " is a scATACpipe module to keep qualified cells via an 'inflection point' method. get_valid_barcode_chromap module achieves the same role."
         )
         self.get_valid_barcode = dict()
-        print("test before")
-        plot_figure(self, dir_n = "get_valid_barcode", endswith = ".jpg", img_width = "32%", name = "Valid barcodes", description = "Valid cell barcodes are inferred with 'inflection point' method as the barcode count cutoff is set to the inflection point in the plot.", helptext = "Cell barcodes in the top-left corner of the plot are valid.")
-        print("test after")
-
-        print(self.get_valid_barcode)
+        plot_figure(self, dir_n = "get_valid_barcode", endswith = ".jpeg", img_width = "32%", name = "Valid barcodes", description = "Valid cell barcodes are inferred with 'inflection point' method as the barcode count cutoff is set to the inflection point in the plot.", helptext = "Cell barcodes in the top-left corner of the plot are valid.")
 
         # Filter out samples matching ignored sample names
         self.get_valid_barcode = self.ignore_samples(self.get_valid_barcode)
