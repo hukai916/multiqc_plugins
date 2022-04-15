@@ -19,6 +19,7 @@ log = logging.getLogger('multiqc')
 class MultiqcModule(BaseMultiqcModule):
 
     def __init__(self):
+        print("enter here")
 
         # Halt execution if we've disabled the plugin
         if config.kwargs.get('disable_get_valid_barcode_plugin', True):
