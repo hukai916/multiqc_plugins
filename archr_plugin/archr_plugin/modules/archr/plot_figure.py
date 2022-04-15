@@ -14,6 +14,8 @@ def plot_figure(self, dir_n, endswith = ".jpg", img_width = "32%", name = "To be
     plot = ""
     plot_path_all = ""
     for f in self.find_log_files('archr/jpeg'):
+        print("TEST")
+        print(f['fn'], f['root'])
         if dir_n in f['root']:
             if f['fn'].endswith(endswith):
                 plot_path = os.path.join(f['root'], f['fn'])
