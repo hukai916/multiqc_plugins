@@ -33,6 +33,9 @@ def get_valid_barcode_plugin_execution_start():
 
     log.info("Running get_valid_barcode MultiQC Plugin v{}".format(config.get_valid_barcode_plugin_version))
 
+    if 'get_valid_barcode/jpeg' not in config.sp:
+    config.update_dict( config.sp, { 'get_valid_barcode/jpeg': { 'fn': '*.jpg' } } )
+
     # Some additional filename cleaning
     config.fn_clean_exts.extend([
         '.my_tool_extension',
