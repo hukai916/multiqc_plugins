@@ -26,8 +26,8 @@ class MultiqcModule(BaseMultiqcModule):
             name = 'Bam Filter',
             target = "bam_filter",
             anchor = 'bam_filter',
-            href = 'https://github.com/hukai916/scatacseqflow/blob/main/modules/local/bam_filter.nf',
-            info = " is a scatacseqflow module to show how many reads are removed for each sample after bam filter."
+            href = 'https://github.com/hukai916/scATACpipe/blob/main/modules/local/bam_filter.nf',
+            info = " is a scATACpipe module to show how many reads are removed for each sample after bam filter."
         )
 
         # Find and load any input files for this module

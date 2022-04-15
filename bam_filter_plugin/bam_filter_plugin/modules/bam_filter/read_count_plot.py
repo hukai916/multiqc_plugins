@@ -31,7 +31,7 @@ def read_count_plot(self):
         description="",
         helptext="""
         This plot shows the total number of reads, broken down into valid reads and filtered reads.
-        This plot is generated based on the summary file from the scatacseqflow bam_filter module.
+        This plot is generated based on the summary file from the scATACpipe bam_filter module.
         """,
         plot=bargraph.plot(pdata, pcats, pconfig),
     )
