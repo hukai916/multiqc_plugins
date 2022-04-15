@@ -26,8 +26,8 @@ class MultiqcModule(BaseMultiqcModule):
             name = 'Barcode Correction',
             target = "barcode_correction",
             anchor = 'barcode_correction',
-            href = 'https://github.com/hukai916/scatacseqflow/blob/main/modules/local/correct_barcode.nf',
-            info = " is a module to show how many barcodes are corrected for each sample."
+            href = 'https://github.com/hukai916/scATACpipe/blob/main/modules/local/correct_barcode.nf',
+            info = " is a scATACpipe module to show how many barcodes are corrected for each sample. The correct_barcode and correct_barcode_pheniq module uses naive and pheniqs method respectively."
         )
 
         # Find and load any input files for this module
