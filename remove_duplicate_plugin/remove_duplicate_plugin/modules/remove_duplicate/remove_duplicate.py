@@ -24,10 +24,10 @@ class MultiqcModule(BaseMultiqcModule):
         # Initialise the parent module Class object
         super(MultiqcModule, self).__init__(
             name = 'Remove Duplicates',
-            target = "remove_duplicate",
-            anchor = 'remove_duplicate',
-            href = 'https://github.com/hukai916/scatacseqflow/blob/main/modules/local/remove_duplicate.nf',
-            info = " is a module to count and remove fragment PCR duplicates for each sample."
+            target = "dedup_bam",
+            anchor = 'dedup_bam',
+            href = 'https://github.com/hukai916/scATACpipe/blob/main/modules/local/dedup_bam.nf',
+            info = " is a scATACpipe module to count and remove fragment PCR duplicates for each sample."
         )
 
         # Find and load any input files for this module
