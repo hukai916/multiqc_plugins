@@ -51,3 +51,4 @@ def get_valid_barcode_plugin_execution_start():
         '*/my_awesome_pipeline/noisy_data/*',
         '*/my_awesome_pipeline/rubbish/*'
     ])
+    print("custom end")
