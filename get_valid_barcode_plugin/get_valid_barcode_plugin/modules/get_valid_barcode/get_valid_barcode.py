@@ -34,8 +34,9 @@ class MultiqcModule(BaseMultiqcModule):
         )
         self.get_valid_barcode = dict()
 
+        log.debug("before")
         plot_figure(self, dir_n = "get_valid_barcode", endswith = "*.jpg", img_width = "32%", name = "Valid barcodes", description = "Valid cell barcodes are inferred with 'inflection point' method as the barcode count cutoff is set to the inflection point in the plot.", helptext = "Cell barcodes in the top-left corner of the plot are valid.")
-
+        log.debug("after")
         # Filter out samples matching ignored sample names
         self.get_valid_barcode = self.ignore_samples(self.get_valid_barcode)
         # Nothing found - raise a UserWarning to tell MultiQC

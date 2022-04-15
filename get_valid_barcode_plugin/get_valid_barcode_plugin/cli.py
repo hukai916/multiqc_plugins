@@ -10,7 +10,7 @@ http://click.pocoo.org/5/
 import click
 
 # Sets config.kwargs['disable_plugin'] to True if specified (will be False otherwise)
-disable_plugin = click.option('--disable-get_valid_barcode-plugin', 'disable_get_valid_barcode_plugin',
+disable_plugin = click.option('--disable-get-valid-barcode-plugin', 'disable_get_valid_barcode_plugin',
     is_flag = True,
     help = "Disable the get_valid_barcode MultiQC plugin on this run"
 )
