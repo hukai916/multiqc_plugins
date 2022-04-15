@@ -1,6 +1,6 @@
 import os
 
-def plot_figure(self, dir_n, endswith = ".jpeg", img_width = "32%", name = "To be added", description = "To be added", helptext = "To be added"):
+def plot_figure(self, dir_n, endswith = ".jpg", img_width = "32%", name = "To be added", description = "To be added", helptext = "To be added"):
     """
     Add a new section in the HTML report.
     Param: dir_n: .jpg file searching path folder (path must contain dir_n).

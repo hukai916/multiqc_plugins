@@ -35,7 +35,7 @@ class MultiqcModule(BaseMultiqcModule):
         )
         self.get_valid_barcode = dict()
         print("test before")
-        plot_figure(self, dir_n = "get_valid_barcode", endswith = ".jpg", img_width = "32%", name = "Valid barcodes", description = "Valid cell barcodes are inferred with 'inflection point' method as the barcode count cutoff is set to the inflection point in the plot.", helptext = "Cell barcodes in the top-left corner of the plot are valid.")
+        plot_figure(self, dir_n = "get_valid_barcode", endswith = ".jpeg", img_width = "32%", name = "Valid barcodes", description = "Valid cell barcodes are inferred with 'inflection point' method as the barcode count cutoff is set to the inflection point in the plot.", helptext = "Cell barcodes in the top-left corner of the plot are valid.")
         print("test after")
 
         print(self.get_valid_barcode)
