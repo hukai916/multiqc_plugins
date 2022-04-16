@@ -75,7 +75,7 @@ class MultiqcModule(BaseMultiqcModule):
         # archr_embedding:
         plot_figure(self, dir_n = "archr_embedding", endswith = ".jpg", img_width = "48%", name = "Single-cell embeddings", description = "", helptext = "ArchR provides two approaches, namely Uniform Manifold Approximation and Projection (UMAP) and t-Stocastic Neighbor Embedding (t-SNE). We plot the embedding use both methods against clusterings.<br>In addition, the effects of Harmony batch correction are visualized using UMAP and t-SNE.")
         # archr_marker_gene_clusters:
-        plot_figure(self, dir_n = "archr_marker_gene_clusters", endswith = ".jpg", img_width = "48%", name = "Marker genes (clusters)", description = "", helptext = "Marker genes are identified based on gene scores, user supplied marker genes are labeled in the heatmap. Marker genes are also visualized on embeddings. To improve the visual interpretation, MAGIC is leveraged to impute the gene scores by smoothing the signals.")
+        plot_figure(self, dir_n = "archr_marker_gene_clusters/", endswith = ".jpg", img_width = "48%", name = "Marker genes (clusters)", description = "", helptext = "Marker genes are identified based on gene scores, user supplied marker genes are labeled in the heatmap. Marker genes are also visualized on embeddings. To improve the visual interpretation, MAGIC is leveraged to impute the gene scores by smoothing the signals.")
         # archr_marker_gene_clusters2:
         plot_figure(self, dir_n = "archr_marker_gene_clusters2", endswith = ".jpg", img_width = "48%", name = "Marker genes (clusters2)", description = "", helptext = "Marker genes are identified based on gene expression, user supplied marker genes are labeled in the heatmap. Marker genes are also visualized on embeddings. To improve the visual interpretation, MAGIC is leveraged to impute the gene expression by smoothing the signals.")
         # archr_scrnaseq_unconstrained:
@@ -83,23 +83,23 @@ class MultiqcModule(BaseMultiqcModule):
         # archr_scrnaseq_constrained:
         plot_figure(self, dir_n = "archr_scrnaseq_constrained", endswith = ".jpg", img_width = "48%", name = "Constrained integration of scRNA-seq data", description = "", helptext = "Based on the general cell types framework according to unconstrained integration plus user supplied additional clustering information, further integration (constrained) are performed.")
         # archr_get_marker_peaks_clusters:
-        plot_figure(self, dir_n = "archr_get_marker_peaks_clusters", endswith = ".jpg", img_width = "48%", name = "ArchR get marker peaks (clusters): plots", description = "ArchR get marker peaks (clusters).", helptext = "To be added")
+        plot_figure(self, dir_n = "archr_get_marker_peaks_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR get marker peaks (clusters): plots", description = "ArchR get marker peaks (clusters).", helptext = "To be added")
         # archr_get_marker_peaks_clusters2:
         plot_figure(self, dir_n = "archr_get_marker_peaks_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR get marker peaks (clusters2): plots", description = "ArchR get marker peaks (clusters2).", helptext = "To be added")
         # archr_marker_peaks_in_tracks_clusters:
-        plot_figure(self, dir_n = "archr_marker_peaks_in_tracks_clusters", endswith = ".jpg", img_width = "48%", name = "ArchR marker peaks in tracks (clusters): plots", description = "ArchR marker peaks in tracks (clusters).", helptext = "To be added")
+        plot_figure(self, dir_n = "archr_marker_peaks_in_tracks_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR marker peaks in tracks (clusters): plots", description = "ArchR marker peaks in tracks (clusters).", helptext = "To be added")
         # archr_marker_peaks_in_tracks_clusters2:
         plot_figure(self, dir_n = "archr_marker_peaks_in_tracks_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR marker peaks in tracks (clusters2): plots", description = "ArchR marker peaks in tracks (clusters2).", helptext = "To be added")
         # archr_pairwise_test_clusters:
-        plot_figure(self, dir_n = "archr_pairwise_test_clusters", endswith = ".jpg", img_width = "48%", name = "ArchR pairwise test (clusters): plots", description = "ArchR pairwise test (clusters).", helptext = "To be added")
+        plot_figure(self, dir_n = "archr_pairwise_test_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR pairwise test (clusters): plots", description = "ArchR pairwise test (clusters).", helptext = "To be added")
         # archr_pairwise_test_clusters2:
         plot_figure(self, dir_n = "archr_pairwise_test_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR pairwise test (clusters2): plots", description = "ArchR pairwise test (clusters2).", helptext = "To be added")
         # archr_motif_deviations_clusters:
-        plot_figure(self, dir_n = "archr_motif_deviations_clusters", endswith = ".jpg", img_width = "48%", name = "ArchR motif deviation (clusters): plots", description = "ArchR motif deviation (clusters).", helptext = "To be added")
+        plot_figure(self, dir_n = "archr_motif_deviations_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR motif deviation (clusters): plots", description = "ArchR motif deviation (clusters).", helptext = "To be added")
         # archr_motif_deviations_clusters2:
         plot_figure(self, dir_n = "archr_motif_deviations_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR motif deviation (clusters2): plots", description = "ArchR motif deviation (clusters2).", helptext = "To be added")
         # archr_coaccessibility_clusters:
-        plot_figure(self, dir_n = "archr_coaccessibility_clusters", endswith = ".jpg", img_width = "48%", name = "ArchR coaccessibility (clusters): plots", description = "ArchR coaccessibility (clusters).", helptext = "To be added")
+        plot_figure(self, dir_n = "archr_coaccessibility_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR coaccessibility (clusters): plots", description = "ArchR coaccessibility (clusters).", helptext = "To be added")
         # archr_coaccessibility_clusters2:
         plot_figure(self, dir_n = "archr_coaccessibility_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR coaccessibility (clusters2): plots", description = "ArchR coaccessibility (clusters2).", helptext = "To be added")
         # archr_peak2genelinkage_clusters2:
@@ -107,7 +107,7 @@ class MultiqcModule(BaseMultiqcModule):
         # archr_trajectory_clusters2:
         plot_figure(self, dir_n = "archr_trajectory_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR trajectory (clusters2): plots", description = "ArchR trajectory (clusters2).", helptext = "To be added")
         # archr_get_positive_tf_regulator_clusters:
-        plot_figure(self, dir_n = "archr_get_positive_tf_regulator_clusters", endswith = ".jpg", img_width = "48%", name = "ArchR positive TF regulator (clusters): plots", description = "ArchR positive TF regulator (clusters).", helptext = "To be added")
+        plot_figure(self, dir_n = "archr_get_positive_tf_regulator_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR positive TF regulator (clusters): plots", description = "ArchR positive TF regulator (clusters).", helptext = "To be added")
         # archr_get_positive_tf_regulator_clusters2:
         plot_figure(self, dir_n = "archr_get_positive_tf_regulator_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR positive TF regulator (clusters2): plots", description = "ArchR positive TF regulator (clusters2).", helptext = "To be added")
 
