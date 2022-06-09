@@ -19,7 +19,7 @@ def plot_figure(self, dir_n, endswith = ".jpg", img_width = "32%", name = "To be
                 plot_path = os.path.join(f['root'], f['fn'])
                 self.archr[plot_path] = f
                 plot_path_all = plot_path_all + plot_path + "<br>"
-                plot = plot + "<figure style=\"border:solid 1px black; display:inline-block; width:" + img_width + "; margin:0.5%\">" + "<figcaption style=\"text-align: center; height: 40px; padding: 3px\">" + f['s_name'] + "</figcaption>" + " <img width=100% src=\"" + plot_path + "\">" + " </figure>"
+                plot = plot + "<figure style=\"border:solid 1px black; display:inline-block; width:" + img_width + "; margin:0.5%\">" + "<figcaption style=\"text-align: center; height: 40px; padding: 3px\">" + f['s_name'] + "</figcaption>" + " <img width=100% src=\"" + plot_path + "\"" + " alt=\"" + "JPEG not available, pls refer to the pdf folder for a PDF version plot." + "\"" + ">" + " </figure>"
     if plot == "":
         # deal with amulet filter module:
         if dir_n == "amulet_filter_doublets/":
