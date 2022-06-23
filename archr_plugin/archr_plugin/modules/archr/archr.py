@@ -94,6 +94,10 @@ class MultiqcModule(BaseMultiqcModule):
         plot_figure(self, dir_n = "archr_pairwise_test_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR pairwise test (clusters): plots", description = "ArchR pairwise test (clusters).", helptext = "To be added")
         # archr_pairwise_test_clusters2:
         plot_figure(self, dir_n = "archr_pairwise_test_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR pairwise test (clusters2): plots", description = "ArchR pairwise test (clusters2).", helptext = "To be added")
+        # archr_motif_enrichment_cluster:
+        plot_figure(self, dir_n = "archr_motif_enrichment_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR motif enrichment (clusters): plots", description = "ArchR motif enrichment (clusters).", helptext = "To be added")
+        # archr_motif_enrichment_cluster2:
+        plot_figure(self, dir_n = "archr_motif_enrichment_clusters2/", endswith = ".jpg", img_width = "48%", name = "ArchR motif enrichment (clusters2): plots", description = "ArchR motif enrichment (clusters2).", helptext = "To be added")
         # archr_motif_deviations_clusters:
         plot_figure(self, dir_n = "archr_motif_deviations_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR motif deviation (clusters): plots", description = "ArchR motif deviation (clusters).", helptext = "To be added")
         # archr_motif_deviations_clusters2:
