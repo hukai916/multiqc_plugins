@@ -102,6 +102,10 @@ class MultiqcModule(BaseMultiqcModule):
         plot_figure(self, dir_n = "archr_motif_deviations_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR motif deviation (clusters): plots", description = "ArchR motif deviation (clusters).", helptext = "To be added")
         # archr_motif_deviations_clusters2:
         plot_figure(self, dir_n = "archr_motif_deviations_clusters2", endswith = ".jpg", img_width = "48%", name = "ArchR motif deviation (clusters2): plots", description = "ArchR motif deviation (clusters2).", helptext = "To be added")
+        # archr_footprinting_clusters:
+        plot_figure(self, dir_n = "archr_footprinting_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR footprinting (clusters): plots", description = "ArchR footprinting (clusters).", helptext = "To be added")
+        # archr_footprinting_clusters2:
+        plot_figure(self, dir_n = "archr_footprinting_clusters2/", endswith = ".jpg", img_width = "48%", name = "ArchR footprinting (clusters2): plots", description = "ArchR footprinting (clusters2).", helptext = "To be added")
         # archr_coaccessibility_clusters:
         plot_figure(self, dir_n = "archr_coaccessibility_clusters/", endswith = ".jpg", img_width = "48%", name = "ArchR coaccessibility (clusters): plots", description = "ArchR coaccessibility (clusters).", helptext = "To be added")
         # archr_coaccessibility_clusters2:
